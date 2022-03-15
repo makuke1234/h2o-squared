@@ -1,0 +1,25 @@
+{
+    "name": "h2o-squared",
+    "displayName": "H2O squared",
+    "description": "Language syntax support for the programming language H2O squared",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "h2o2",
+            "aliases": ["H2O^2", "h2o2"],
+            "extensions": [".h2o2 .hdo .hdo2 .h2o .hho .hho2"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "h2o2",
+            "scopeName": "source.h2o2",
+            "path": "./syntaxes/h2o2.tmLanguage.json"
+        }]
+    }
+}
