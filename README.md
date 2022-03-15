@@ -1,6 +1,6 @@
 # h2o-squared README
 
-This is the README for your extension "h2o-squared". After writing up a brief description, we recommend including the following sections.
+> A syntax highlighter for VS Code for the programming language H2O^2.
 
 ## Features
 
