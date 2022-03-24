@@ -1,31 +1,195 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "H2O^2",
-	"patterns": [
+	"patterns":
+	[
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#funcNames"
+		},
+		{
+			"include": "#variableNames"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
 		}
 	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.h2o2",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+	"repository":
+	{
+		"keywords":
+		{
+			"patterns":
+			[
+				{
+					"name": "keyword.control.h2o2",
+					"match": "\\b(if|else|while|for|print)\\b"
+				}
+			]
 		},
-		"strings": {
+		"punctuation":
+		{
+			"patterns":
+			[
+				{
+					"match": "(<=|>=|<|>|==|!=)|(=)|(\\+|-|\\*|/)",
+					"captures": {
+						"1":
+						{
+							"name": "keyword.operator.comparison.h2o2"
+						},
+						"2":
+						{
+							"name": "keyword.operator.assignment.h2o2"
+						},
+						"3":
+						{
+							"name": "keyword.operator.arithmetic.h2o2"
+						}
+					}
+				},
+				{
+					"match": "\\b(str|val)\\s*(\\()",
+					"captures":
+					{
+						"1":
+						{
+							"name": "keyword.operator.h2o2"
+						},
+						"2":
+						{
+							"name": "punctuation.h2o2"
+						}
+					}
+				},
+				{
+					"name": "punctuation.h2o2",
+					"match": "(,|{|}|\\(|\\))"
+				},
+				{
+					"match": "\\b(input)\\s*(\\(\\))",
+					"captures":
+					{
+						"1":
+						{
+							"name": "keyword.control.h2o2"
+						},
+						"2":
+						{
+							"name": "punctuation.h2o2"
+						}
+					}
+				}
+			]
+		},
+		"numbers":
+		{
+			"patterns":
+			[
+				{
+					"match": "\\b((0b)([0-1]+))|((0x)(([0-9]|[a-f]|[A-F])+))|(0[0-7]+)|(([0-9]+\\.[0-9]*)|([0-9]*\\.[0-9]+))|([0-9]+)\\b",
+					"captures":
+					{
+						"2":
+						{
+							"name": "keyword.other.unit.binary.h2o2"
+						},
+						"3":
+						{
+							"name": "constant.numeric.binary.h2o2"
+						},
+						"5":
+						{
+							"name": "keyword.other.unit.hexadecimal.h2o2"
+						},
+						"6":
+						{
+							"name": "constant.numeric.hexadecimal.h2o2"
+						},
+						"8":
+						{
+							"name": "constant.numeric.octal.h2o2"
+						},
+						"9":
+						{
+							"name": "constant.numeric.double.h2o2"
+						},
+						"12":
+						{
+							"name": "constant.numeric.h2o2"
+						}
+					}
+				}
+			]
+		},
+		"funcNames":
+		{
+			"patterns":
+			[
+				{
+					"match": "\\b(sub) (([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]|_)*)\\b",
+					"captures":
+					{
+						"1":
+						{
+							"name": "keyword.control.h2o2"
+						},
+						"2":
+						{
+							"name": "entity.name.function.h2o2"
+						}
+					}
+				}
+			]
+		},
+		"variableNames":
+		{
+			"patterns":
+			[
+				{
+					"match": "\\b(var) (([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]|_)*)\\b",
+					"captures":
+					{
+						"1":
+						{
+							"name": "keyword.control.h2o2"
+						},
+						"2":
+						{
+							"name": "variable"
+						}
+					}
+				}
+			]
+		},
+		"strings":
+		{
 			"name": "string.quoted.double.h2o2",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [
+			"patterns":
+			[
 				{
 					"name": "constant.character.escape.h2o2",
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments":
+		{
+			"name": "comment.line.h2o2",
+			"begin": "#",
+			"end": "\n|\r"
 		}
 	},
 	"scopeName": "source.h2o2"
