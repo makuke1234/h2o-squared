@@ -7,7 +7,7 @@
 ### 1.0.0
 
 Initial release, example of syntax highlighting:
-![Syntax1](https://github.com/makuke1234/h2o-squared/images/pic1.png)
+![Syntax1](https://github.com/makuke1234/h2o-squared/raw/master/images/pic1.png)
 
 
 # License
