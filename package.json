@@ -21,5 +21,9 @@
             "scopeName": "source.h2o2",
             "path": "./syntaxes/h2o2.tmLanguage.json"
         }]
-    }
+    },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/makuke1234/h2o-squared"
+	}
 }
