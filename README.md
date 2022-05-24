@@ -4,6 +4,10 @@
 
 
 ## Release Notes
+
+### 1.0.1
+Optimize extension size
+
 ### 1.0.0
 
 Initial release, example of syntax highlighting:

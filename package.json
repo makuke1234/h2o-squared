@@ -2,7 +2,7 @@
     "name": "h2o-squared",
     "displayName": "H2O squared",
     "description": "Language syntax support for the programming language H2O squared",
-    "version": "1.0.0",
+    "version": "1.0.1",
 	"publisher": "makuke1234",
     "engines": {
         "vscode": "^1.65.0"
